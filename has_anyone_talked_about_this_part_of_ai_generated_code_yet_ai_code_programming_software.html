@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="Fast code generation can hide the cost of understanding and maintaining each change. A team may save typing time while accumulating review work.">
-  <title>Has Anyone Talked About This Part Of Ai-generated Code Yet #ai #code #programming #software</title>
+  <meta name="description" content="Explore overlooked AI-generated code challenges: lost context, review fatigue, unclear assumptions, and long-term maintenance responsibilities.">
+  <title>The Overlooked Cost of AI-Generated Code: Understanding and Ownership | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">The overlooked cost of AI-generated code</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Fast code generation can hide the cost of understanding and maintaining each change. A team may save typing time while accumulating review work.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">What to measure</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Track regressions, onboarding effort, duplicated logic, and time spent explaining generated functions. These reveal whether the workflow is actually improving productivity.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">A sustainable practice</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Require small diffs, documented assumptions, and tests. Delete unnecessary code instead of preserving it simply because it was easy to generate.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">The hidden question after the code works</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI-generated code is often judged at the moment it first runs. A feature appears on screen, a test passes, and the developer moves on. But an important question remains: who understands the implementation well enough to change it next month?</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A working demonstration proves only that a particular path behaved as expected. It does not show whether the code fits the wider architecture, handles unusual conditions, or communicates its intent to future maintainers.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The overlooked cost is often not a dramatic failure. It is the gradual loss of understanding when a project accumulates generated changes faster than anyone can explain them.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Prompts can hide important assumptions</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A request such as add user profiles leaves many choices unspecified. Can users edit each other's information? Which fields are public? How should the system respond when a record is missing? An assistant may fill these gaps with plausible defaults.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Those assumptions can remain invisible until a bug report or security review exposes them. Before merging generated code, compare the implementation with a written list of expected behavior and permissions.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Ask the assistant to identify uncertain decisions, but confirm them yourself. A model's explanation is useful for investigation, not proof that the underlying requirements are correct.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Review fatigue changes team behavior</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Generating a large patch can take seconds, while carefully reviewing it may take much longer. If teams receive too many changes at once, reviewers may begin checking only obvious syntax and visual appearance.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">This creates a dangerous mismatch between output speed and verification capacity. A small pull request with a clear purpose is easier to evaluate than a sweeping rewrite that combines new features, dependency changes, and formatting.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Encourage focused changes and require test evidence. When a patch is difficult to understand, splitting it into smaller pieces is a quality improvement rather than an unnecessary delay.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Maintenance is a continuing responsibility</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A generated helper may duplicate an existing utility or use a package that nobody on the team knows. The immediate task is complete, but the project now has another dependency and another pattern to maintain.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Document important design decisions and remove confirmed duplication when tests protect the behavior. Avoid comments that merely restate what a line does; explain why a particular approach was chosen and which constraints it satisfies.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The goal is not to eliminate AI assistance. It is to preserve a codebase that can be repaired and extended without replaying the original conversation.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Build an understanding-first workflow</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">After generating a feature, ask someone to explain the data flow and failure handling in ordinary language. Run tests for normal inputs, boundary values, and unsuccessful external requests. Review any access-control or data-storage changes separately.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Use version control to track decisions and make reversals possible. Treat generated code as a draft that must earn its place in the project through clarity and verification.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The real measure of success is not how quickly code appears. It is whether the team can trust, understand, and maintain the behavior after the initial excitement has faded.</p>
+</div>
         </div>
     </div>
 
