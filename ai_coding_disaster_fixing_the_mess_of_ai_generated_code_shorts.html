@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="A rushed series of generated changes can leave a project with conflicting functions, fragile dependencies, and confusing error messages.">
-  <title>AI coding disaster fixing the mess of AI generated code shorts | Lanauke.Com</title>
+  <meta name="description" content="A practical recovery plan for messy AI-generated code: stabilize the project, identify regressions, simplify modules, and review small changes.">
+  <title>Fixing a Messy AI-Generated Codebase Without Starting Over | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,23 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Recovering from an AI coding disaster</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">A rushed series of generated changes can leave a project with conflicting functions, fragile dependencies, and confusing error messages.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Stabilize before rewriting</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Stop adding features, reproduce the most important failures, and restore a known working version if necessary.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Repair in small steps</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Use tests to protect existing behavior, remove unused code, and review each change before merging it.</p></div>
+            <div class="col-xs-12 lead"><p style="margin:0 0 12px !important;line-height:1.65 !important;">An AI-assisted project can become difficult to manage surprisingly quickly. One prompt adds a feature, the next changes several files to fix a bug, and a third introduces a new library. Before long, the application contains duplicated helpers and nobody is certain which pieces are still needed.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The temptation is to ask another assistant to rewrite everything from scratch. That approach can remove valuable working behavior along with the mistakes. Recovery usually begins with understanding what you already have.</p><h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Stop changing features and establish a baseline</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Pause new feature requests until the project runs consistently. Save the current state in version control and identify the last revision that behaved as expected.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Make a short list of what still works and what fails. Prioritize problems that affect user data, permissions, or essential workflows. Cosmetic issues can wait until the system is stable.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">This baseline prevents a cleanup effort from turning into another uncontrolled series of edits.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Map the confusing parts</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Look for multiple functions that perform the same task, unused packages, inconsistent naming, and files that mix unrelated responsibilities. Do not delete code solely because it looks repetitive; first confirm whether different callers depend on it.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Trace the main user journey from the interface to the relevant functions and stored data. A simple diagram or written outline often exposes hidden dependencies that a generated summary misses.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Use search and tests to identify where a function is called before renaming or removing it.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Refactor in small, verifiable steps</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Start with one module. Add tests that describe its current required behavior, then simplify the implementation while keeping those tests green.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Separate bug fixes from structural cleanup when possible. A change that both alters behavior and rearranges several files is harder to review and harder to undo.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">If an assistant proposes a broad rewrite, ask for a smaller patch and an explanation of each affected interface.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Prevent the same mess from returning</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Establish conventions for naming, dependencies, error handling, and file organization. Require reviewable diffs and test results for AI-assisted changes.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Keep a short decision record for important architectural choices. It helps future contributors understand why the project uses a particular approach instead of generating a new one each time.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The goal is not to remove every trace of AI assistance. It is to restore a codebase that people can understand, test, and improve with confidence.</p></div>
         </div>
     </div>
 </section>
