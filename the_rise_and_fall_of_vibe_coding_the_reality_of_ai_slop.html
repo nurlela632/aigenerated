@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="Natural-language programming can make prototypes accessible, but rapid generation may also create redundant or fragile implementations.">
-  <title>The Rise And Fall Of Vibe Coding: The Reality Of Ai Slop</title>
+  <meta name="description" content="Explore the appeal of vibe coding, the risks of low-quality AI output, and a practical approach to building maintainable software.">
+  <title>The Rise and Limits of Vibe Coding: Beyond AI Slop | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">The promise and pitfalls of vibe coding</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Natural-language programming can make prototypes accessible, but rapid generation may also create redundant or fragile implementations.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Why projects stall</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Unclear requirements, repeated broad rewrites, and missing tests make it hard to distinguish progress from churn.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Use a disciplined process</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Define acceptance criteria, review small diffs, and refactor only with regression tests. Speed is useful when the result remains understandable.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Why vibe coding became popular</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Vibe coding describes an informal approach in which a developer explains a desired result to an AI assistant, accepts generated code, and iterates until the project seems to work. It has attracted attention because it lowers the barrier to making a prototype.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Someone with a simple website idea can quickly produce a page, add buttons, and experiment with layouts. Experienced programmers can also use the approach to explore unfamiliar libraries or build throwaway demonstrations.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The trouble begins when the speed of generating a prototype is confused with the work required to deliver reliable software. A page that looks finished may still contain hidden assumptions, fragile dependencies, and incomplete error handling.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">What people mean by AI slop</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The term AI slop is often used for low-effort generated material that looks substantial but offers little real value. In software, the equivalent can be a large codebase full of repetitive helpers, unnecessary packages, and features that have never been tested.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Not all AI-generated code fits this description. A small, well-specified function that passes appropriate tests may be entirely useful. The distinction is the quality of the result and the care taken to review it.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Judging code by whether a model produced it is less informative than asking whether it meets requirements, follows project conventions, and can be maintained.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Why impressive demos can be misleading</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A demonstration usually follows the most successful path. The presenter enters expected data, clicks the intended buttons, and shows a polished result. Real users behave differently.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">They may submit an empty form, open the site on a narrow screen, lose connectivity, or repeat an action. A generated app may handle none of these situations correctly unless the requirements explicitly address them.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A convincing interface is therefore a starting point for evaluation, not proof that the software is ready for public use.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Move from prompting to engineering</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Begin with a written specification. Describe the intended user, the main workflow, invalid inputs, and the conditions under which an action must be rejected.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Ask the assistant for focused changes instead of repeated full-project rewrites. Review each diff, test the behavior, and preserve working versions in Git. When a suggested dependency appears, verify why it is necessary.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">For features that handle private data, inspect authorization at the server or database boundary. Do not rely on a hidden button or a browser-only check to enforce permissions.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Keep the creative advantages</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Fast prototyping is valuable when it helps people test ideas before investing in a full implementation. The lesson is not to stop experimenting, but to recognize when experimentation must become disciplined development.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Add regression tests, document important design decisions, and simplify code that has grown through many iterations. A team should be able to explain how the software works without replaying every prompt.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Vibe coding can accelerate discovery. Reliable engineering turns that discovery into something people can depend on.</p>
+</div>
         </div>
     </div>
 
