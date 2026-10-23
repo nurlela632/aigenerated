@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="A model may produce convincing code with weak input validation, unsafe defaults, or missing access controls.">
-  <title>How Ai-generated Code Can Put Your Security At Risk</title>
+  <meta name="description" content="Learn common security risks in AI-generated code, including missing authorization, exposed secrets, unsafe input handling, and unreviewed dependencies.">
+  <title>How AI-Generated Code Can Put Application Security at Risk | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Security risks in AI-generated software</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">A model may produce convincing code with weak input validation, unsafe defaults, or missing access controls.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Where to inspect first</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Review authentication, authorization, database queries, secrets, external requests, and dependency versions. Never assume a successful demo establishes security.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Reduce exposure</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Use established frameworks, run security checks, and have qualified reviewers inspect sensitive functionality before deployment.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Why a working feature may still be insecure</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI assistants are good at producing examples that demonstrate the requested behavior. A login form may submit correctly, a dashboard may display records, and an API route may return data. None of those observations proves that the implementation enforces appropriate security boundaries.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Security requirements are often omitted from short prompts. If the assistant is not told who may access a record or which input is trusted, it may generate code that handles the successful path without protecting against misuse.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The safest approach is to review generated code against explicit security requirements rather than assuming that a polished result is production-ready.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Missing authorization is a serious risk</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Authentication answers who a user is. Authorization determines what that user is allowed to do. A generated endpoint might check that someone is logged in while failing to verify ownership of the record they request.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Imagine a profile page that loads data using a numeric record identifier. If the server returns any matching record without checking permissions, changing the identifier could expose another person's information.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Review access controls at the server or database boundary. Do not rely on hidden buttons or client-side checks to protect private records. Test that an ordinary account cannot read or modify data belonging to another account.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Input handling and secrets require attention</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Applications receive data from forms, URLs, files, and external services. Treat these inputs as untrusted until they are validated for the intended operation. Use established APIs and parameterized database queries instead of constructing commands from unchecked text.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Generated examples sometimes place configuration values directly into source files. Public browser code and repositories are not safe locations for private API keys or administrative credentials.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Keep sensitive values in appropriate secret-management facilities and avoid including them in debugging prompts. If a credential is accidentally exposed, follow the provider's process to revoke and replace it.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Dependencies and external requests introduce risk</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">An assistant may add a package because it recognizes the name from an example. Before accepting it, confirm that the dependency is necessary, maintained, compatible with your runtime, and appropriate for the project's license requirements.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Review outbound requests and third-party scripts. Understand which data leaves the application and how failures are handled. An unexpected network call deserves investigation even if the visible feature works.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Automated dependency checks and static analysis can help, but their findings still need interpretation. Tools complement review rather than replacing it.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Create a repeatable security review</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Start with a short threat-focused checklist: identify sensitive data, trust boundaries, permission checks, external services, and error handling. Add tests for unauthorized access and invalid input alongside ordinary feature tests.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">For important changes, seek independent review and monitor the application after deployment. Keep logs useful for troubleshooting without collecting unnecessary personal information.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI-generated code can be part of secure software, but only when developers verify the implementation and remain accountable for what they deploy.</p>
+</div>
         </div>
     </div>
 
