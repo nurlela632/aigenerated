@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="Code written with an assistant may include generic comments, repetitive structures, or inconsistent conventions. None of these patterns proves its origin b">
-  <title>AI code detection how to spot AI generated code | Lanauke.Com</title>
+  <meta name="description" content="Learn why AI-code detection is uncertain, which patterns deserve review, and how to assess code quality without false authorship claims.">
+  <title>AI Code Detection: What You Can and Cannot Tell From Source Code | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,23 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Spotting possible AI-assisted code without overclaiming</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Code written with an assistant may include generic comments, repetitive structures, or inconsistent conventions. None of these patterns proves its origin because human developers can produce them too.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">What code review can actually establish</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Reviewers can verify behavior, identify security weaknesses, and assess maintainability. Development records and disclosure provide stronger provenance evidence than stylistic guesses.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Use detection tools responsibly</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Treat scores as uncertain indicators, evaluate false positives, and avoid labeling someone's work without corroborating information.</p></div>
+            <div class="col-xs-12 lead"><p style="margin:0 0 12px !important;line-height:1.65 !important;">Can you tell whether a piece of software was written by a person or an AI assistant? It is tempting to look for unusually neat formatting, repetitive comments, or variable names that sound generic. The trouble is that none of those features belongs exclusively to generated code.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Human developers use templates, formatters, autocomplete, and shared examples. AI-assisted code is also frequently edited by people. Once those workflows overlap, source-code style becomes a weak way to establish authorship.</p><h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Why familiar clues are unreliable</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A detector may flag code that contains predictable loops, verbose explanations, or repeated patterns. Yet a beginner following a tutorial might produce exactly the same structure. Conversely, a developer can substantially rewrite generated code until it resembles the rest of a repository.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The programming language matters too. Small Python functions and JavaScript utility snippets have limited ways to express common operations. Similarity is not necessarily evidence of a shared author or a particular tool.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Treat stylistic clues as reasons to inspect code more carefully, not as grounds for accusing someone of using an assistant.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">What an automated detector actually provides</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Detection services typically assign a score or label based on patterns learned from examples. Their performance depends on the training samples, the language, the length of the input, and how much editing occurred after generation.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A percentage displayed in a report should not be interpreted as the probability that a specific developer used AI unless the service can justify that interpretation. False positives matter, especially in education and professional reviews.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">If you evaluate a detector, test it on known human-written and AI-assisted examples from similar projects. Record incorrect classifications as well as correct ones.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Better evidence for provenance</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">When it genuinely matters how code was produced, development history offers more context than formatting. Pull requests, commit messages, design discussions, and documented tool use can show how a solution evolved.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">These records are not perfect proof either. Commits can be squashed and code may be prepared outside the repository. They are nevertheless more useful for understanding the process than a single stylistic score.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Set clear disclosure expectations before a project begins. Contributors should know what tool use needs to be documented and why.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Review code for what it does</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">In most projects, correctness and safety are more urgent than authorship. Check whether the function satisfies its specification, handles invalid input, respects permissions, and uses supported dependencies.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Ask for reproducible examples when a reviewer identifies a problem. A failing test, a missing authorization check, or an incorrect calculation is actionable regardless of whether the original draft came from a model.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A fair code review focuses on evidence and improvement. Detection claims should remain appropriately cautious, particularly when they could affect someone's reputation.</p></div>
         </div>
     </div>
 </section>
