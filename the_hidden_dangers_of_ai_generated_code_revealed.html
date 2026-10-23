@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="Code that appears correct may contain insecure defaults, outdated dependencies, or subtle logic errors.">
-  <title>The Hidden Dangers Of Ai-generated Code Revealed</title>
+  <meta name="description" content="Understand overlooked risks in AI-generated code, from missing authorization and fragile dependencies to review fatigue and maintainability.">
+  <title>Hidden Dangers of AI-Generated Code and How to Avoid Them | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Hidden risks of generated code</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Code that appears correct may contain insecure defaults, outdated dependencies, or subtle logic errors.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Review beyond the demo</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Test unusual inputs, verify authorization, and inspect network behavior. Pay special attention to operations involving private data.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Create safeguards</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Use code review, automated checks, dependency updates, and a rollback plan before publishing.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">The risk behind convincing demonstrations</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI coding assistants can produce code that looks complete and behaves correctly in a short demonstration. That can create a false sense of confidence when the implementation has not been tested with unexpected inputs or realistic conditions.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A generated dashboard may display sample records while failing to enforce permissions on real data. A script may process one example correctly but crash when a field is missing. These problems are not always visible during a quick preview.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The central danger is treating plausible output as verified software. Code needs review in the context of the application where it will run.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Security assumptions can be missing</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A prompt may describe what a user should be able to do without specifying what other users must be prevented from doing. The generated implementation might check whether someone is signed in but omit record-level authorization.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Validate untrusted input, protect sensitive operations at trusted boundaries, and keep credentials out of browser code and public repositories.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">For high-impact features, include tests for unauthorized access and error handling. A feature that works for the intended user should also reject actions the user is not allowed to perform.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Dependencies can introduce unexpected obligations</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Generated solutions sometimes add packages because they appear convenient. A dependency may be unnecessary, incompatible with the current environment, or subject to license obligations the developer has not reviewed.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Inspect package changes, check current documentation, and understand why each new library is needed. Avoid adding an entire framework to solve a small problem already handled by existing code.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">External services also create operational dependencies. Plan what the application should do when a network request fails or a provider changes its interface.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Review fatigue creates technical debt</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI can generate large patches faster than people can examine them. When reviewers face too much code at once, they may approve changes based on surface appearance.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Unreviewed patches can accumulate duplicated functions, inconsistent naming, and confusing state handling. These issues make future bugs harder to locate and repairs more expensive.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Request focused changes, inspect diffs, and run tests after each meaningful edit. Refactor only with a clear understanding of the behavior that must remain intact.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Reduce risk with a simple workflow</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Start with written requirements and a small implementation. Verify normal behavior, invalid input, permission boundaries, and failures of external services.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Use automated tests, dependency checks, and human review as complementary safeguards. No single tool can establish that a complex feature is correct in every context.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI-generated code is not inherently unusable. Its risks become manageable when developers treat generation as the beginning of engineering rather than the end.</p>
+</div>
         </div>
     </div>
 
