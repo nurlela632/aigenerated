@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="ChatGPT can suggest implementations and explain unfamiliar patterns, but its answers can contain invented APIs or incorrect assumptions.">
-  <title>The Truth About Chatgpt Generated Code</title>
+  <meta name="description" content="A practical guide to the strengths and limitations of ChatGPT-generated code, with advice on testing, security, and maintainability.">
+  <title>The Truth About ChatGPT-Generated Code: Benefits and Limitations | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">What ChatGPT-generated code gets right and wrong</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">ChatGPT can suggest implementations and explain unfamiliar patterns, but its answers can contain invented APIs or incorrect assumptions.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Check the context</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Provide the language version, existing interfaces, and a concrete example. Verify library behavior against official documentation.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Take responsibility for the result</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Run tests, inspect edge cases, and understand the code before using it in production.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">What ChatGPT can help developers do</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">ChatGPT can draft functions, explain programming concepts, propose tests, and help investigate error messages. For repetitive tasks, these capabilities can make it easier to get from a requirement to an initial implementation.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The quality of a response depends on the information provided. A precise description of an existing repository often produces more useful suggestions than a request to build an entire application without constraints.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">It is helpful to think of generated code as a proposal. The assistant can suggest an implementation, but the developer must decide whether it is appropriate for the project.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Why correct-looking code sometimes fails</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Generated examples may assume the wrong library version, overlook a missing configuration value, or use a method that is not available in the actual environment.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A function can also behave correctly for the sample input while failing with empty data, unexpected types, or a network error. These failures may not be obvious from reading a confident explanation.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Reproduce the behavior in the intended runtime and compare unfamiliar APIs with current official documentation. An explanation is not a substitute for evidence.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">The importance of clear prompts</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">State the programming language, framework version, relevant files, and expected behavior. Explain what must remain unchanged, especially when modifying a live website or an established application.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">For debugging, provide the exact error message and steps needed to reproduce the problem. Ask for the smallest plausible fix rather than a complete rewrite.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">If requirements are ambiguous, ask the assistant to list its assumptions before generating code. Resolving uncertainty early can prevent unnecessary rework.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Security and maintenance require review</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Inspect permission checks, input validation, and the handling of sensitive data. Keep private keys and credentials out of public source files and prompts.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Review added dependencies and external requests. A package that makes a demonstration convenient may introduce maintenance or licensing obligations that the project does not need.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Code readability matters too. Avoid accepting large patches that nobody can explain. Use descriptive names, consistent error handling, and focused changes that fit existing conventions.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">A realistic workflow for reliable results</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Start with a small task, review the generated diff, and run tests for normal and unusual inputs. Add regression tests when fixing defects.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Keep the project in version control and verify the deployed application, not only the local preview. For important features, seek independent review before release.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">ChatGPT-generated code can be genuinely useful. Its value comes from combining fast drafting with human judgment, technical verification, and responsibility for the final product.</p>
+</div>
         </div>
     </div>
 
