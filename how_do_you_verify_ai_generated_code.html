@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="Verification starts with a clear specification: what should happen, which inputs are valid, and how failures must be handled.">
-  <title>How Do You Verify Ai-generated Code</title>
+  <meta name="description" content="A practical verification checklist for AI-generated code covering requirements, tests, security, dependencies, and deployment readiness.">
+  <title>How to Verify AI-Generated Code Before You Use It | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">How to verify generated code</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Verification starts with a clear specification: what should happen, which inputs are valid, and how failures must be handled.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Use layered checks</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Combine unit tests, integration tests, static analysis, dependency review, and manual inspection. No single check catches every defect.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Record evidence</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Keep test results, known limitations, and review decisions with the change. A passing test is useful evidence, not a blanket guarantee.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Verification begins before running the code</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI-generated code can look complete because it uses familiar syntax and confident explanations. Yet the first question is whether it solves the problem you actually intended. A function may work perfectly for an assumption that was never part of your requirements.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Write down the expected inputs, outputs, and constraints. Identify which files or behaviors must remain unchanged. For a web form, that might include required fields, validation messages, and whether submissions should be allowed more than once.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Compare the generated implementation with those expectations before accepting it. If important behavior is missing, clarify the requirement rather than immediately adding more code.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Read the implementation and inspect its dependencies</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Review the functions, data flow, and error handling. Ask what each external package contributes and whether it is compatible with the project's current environment.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Look for hard-coded values that belong in configuration, repeated logic, and network requests you did not expect. Verify unfamiliar APIs using authoritative documentation.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">If the assistant modifies an existing repository, inspect the diff carefully. A small feature request should not silently remove unrelated functionality or rewrite the project's structure.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Test normal, boundary, and failure cases</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Start with an ordinary input and confirm the expected output. Then test empty values, unusual lengths, duplicates, and invalid data. These cases often reveal assumptions hidden by a successful demonstration.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">For functions that depend on a database or API, test unsuccessful responses and temporary failures. Check whether retries could create duplicate operations and whether errors are reported clearly.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Automated tests help preserve correct behavior as the code changes. When a generated fix resolves a bug, add a regression test that would catch the same issue if it returned.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Review security and user experience</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Identify where untrusted input enters the system and where permissions must be enforced. Confirm that private records cannot be accessed merely by changing an identifier and that sensitive keys are not included in public source code.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">For user interfaces, check keyboard navigation, form labels, mobile layouts, and visible feedback. Code can be functionally correct while still being difficult or impossible for some people to use.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Performance may also matter. Measure expensive operations or repeated network requests when the feature handles meaningful amounts of data.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Prepare for deployment and maintenance</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Run the project in an environment that resembles production. Confirm configuration, dependencies, and error reporting. Keep a known working revision so you can roll back if deployment reveals an unexpected problem.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Document important assumptions and decisions rather than describing every line. A future maintainer should understand what the component promises to do and why its key design choices were made.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Verification is not a one-time stamp of approval. As requirements and dependencies change, tests and reviews should evolve with them. AI makes drafting faster; disciplined verification makes the result dependable.</p>
+</div>
         </div>
     </div>
 
