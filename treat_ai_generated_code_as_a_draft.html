@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="A first response may satisfy the visible example while missing edge cases and project-specific requirements.">
-  <title>Treat Ai-generated Code As A Draft</title>
+  <meta name="description" content="Learn a disciplined workflow for reviewing AI-generated drafts, refining requirements, testing behavior, and preparing reliable releases.">
+  <title>Treat AI-Generated Code as a Draft, Not a Finished Product | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Why generated code should begin as a draft</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">A first response may satisfy the visible example while missing edge cases and project-specific requirements.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Review systematically</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Check correctness, clarity, security, and dependency choices. Ask for an explanation of surprising logic.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Promote only verified changes</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Add tests, inspect the diff, and document limitations before treating the implementation as finished.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Why the draft mindset matters</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI assistants can produce working-looking code within seconds. That speed is helpful, but it can encourage developers to accept the output before checking whether it meets the actual requirements.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Thinking of generated code as a draft creates space for questions. What assumptions did the assistant make? Which edge cases were ignored? How does the change interact with the rest of the project?</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The draft mindset is not a rejection of AI. It is a practical way to use its speed without giving up responsibility for the software.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Clarify the intended behavior</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Before requesting code, write down the user journey, expected inputs and outputs, and any constraints. For a form, specify required fields, validation messages, and what happens when submission fails.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">When the assistant proposes an implementation, compare it with the written requirements. If an important behavior is missing, revise the specification rather than immediately adding unrelated features.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Clear acceptance criteria make it possible to judge the code on evidence instead of whether it looks polished.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Review the implementation in context</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Inspect the generated diff and trace how data moves through the new feature. Check for duplicated functions, unnecessary dependencies, and modifications to files outside the requested scope.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Verify unfamiliar library calls against current documentation. A plausible API name is not proof that the method exists in the version your project uses.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">For applications handling private information, review authorization and input validation at trusted boundaries. Client-side checks alone are not enough to protect sensitive operations.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Test and refine the draft</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Run normal cases, invalid inputs, and realistic failures. Test empty data, repeated actions, and unavailable external services where relevant.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">When something breaks, reproduce the issue and request a focused correction. Apply one change at a time and rerun existing tests to catch regressions.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">For interfaces, check mobile layouts, keyboard navigation, and clear feedback. A technically functioning page may still be difficult to use.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Decide when the code is ready</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A draft becomes release-ready when the team has evidence that it meets requirements, follows appropriate security practices, and can be maintained.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Keep version-control history, document important assumptions, and verify the actual deployed result. Maintain a rollback path if a problem appears after release.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Treating AI output as a draft transforms generation from an act of trust into a structured engineering process.</p>
+</div>
         </div>
     </div>
 
