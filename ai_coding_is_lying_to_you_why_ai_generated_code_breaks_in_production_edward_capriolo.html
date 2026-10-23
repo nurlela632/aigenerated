@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="A demo often runs with ideal inputs and a predictable environment. Real services encounter missing data, network delays, concurrent requests, and permissio">
-  <title>AI coding is lying to you why AI generated code breaks in production edward capriolo | Lanauke.Com</title>
+  <meta name="description" content="Understand why AI-generated code may work in demos but fail in production, from unreliable services to permissions, concurrency, and monitoring.">
+  <title>Why AI-Generated Code Breaks in Production | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,23 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Why AI-generated code can break in production</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">A demo often runs with ideal inputs and a predictable environment. Real services encounter missing data, network delays, concurrent requests, and permission boundaries.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Production-only failure modes</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Look for missing timeouts, unhandled exceptions, incorrect access checks, and dependencies that behave differently across environments.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Deploy with evidence</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Test realistic workloads, add monitoring, and prepare a rollback plan. Review critical paths with people who understand the system.</p></div>
+            <div class="col-xs-12 lead"><p style="margin:0 0 12px !important;line-height:1.65 !important;">A generated feature may behave perfectly on a developer's laptop and fail soon after deployment. That difference does not necessarily mean the assistant produced nonsense. More often, the demonstration covered a narrow set of conditions while production introduced users, data, and failures that were never considered.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The important distinction is between code that works once and a system that behaves reliably over time. Production readiness requires deliberate checks beyond a successful screenshot or quick test.</p><h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Real input is rarely as clean as a demo</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Example data usually contains the expected fields and valid values. Production data may be incomplete, duplicated, outdated, or submitted in an unexpected order.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Consider a function that calculates a total. Does it handle an empty basket, an invalid quantity, or a missing currency? What happens when two updates arrive almost simultaneously?</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Document the allowed inputs and add tests for boundary and failure cases. Validation should happen at the appropriate trust boundary, not only in the browser.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">External services introduce uncertainty</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Applications depend on databases, APIs, file storage, and networks. These services can respond slowly, reject requests, or become temporarily unavailable.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Generated code sometimes assumes every request succeeds. Production implementations need sensible timeouts, clear error handling, and carefully designed retries. Retrying a payment or write operation without considering duplicates can create new problems.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Test service failures intentionally. A controlled timeout in a test environment is more informative than waiting for a real outage.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Security and permissions cannot be inferred</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A prototype may skip authentication or assume that every user is allowed to access every record. That assumption becomes dangerous once real accounts and private information are involved.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Review authorization on the server for each sensitive operation. Protect credentials, validate untrusted input, and avoid exposing internal error details to users.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Security-sensitive changes deserve independent review, even when an AI assistant explains the code confidently.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Observability and rollback complete the picture</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A system that fails silently is hard to repair. Add useful logs, error reporting, and health checks while avoiding the collection of unnecessary personal information.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Before deployment, confirm that tests pass, configuration is correct, and a previous working version can be restored. Release changes gradually when the platform allows it.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI can accelerate implementation, but reliable production software still depends on clear requirements, testing, monitoring, and accountable engineering decisions.</p></div>
         </div>
     </div>
 </section>
