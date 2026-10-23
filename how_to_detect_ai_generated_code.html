@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="There is no universal signature that reliably identifies all model-written source code. Human and AI coding styles overlap.">
-  <title>How To Detect Ai Generated Code</title>
+  <meta name="description" content="Learn why AI-generated code is difficult to identify reliably, how detectors can fail, and what evidence is more useful than style guesses.">
+  <title>How to Detect AI-Generated Code: Evidence, Limits, and Better Reviews | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Detecting AI-generated code: what evidence means</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">There is no universal signature that reliably identifies all model-written source code. Human and AI coding styles overlap.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Review the actual implementation</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Check function behavior, comments, dependencies, and commit history. Suspicious formatting alone does not establish authorship.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Use detection claims cautiously</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Treat automated scores as uncertain signals and avoid making accusations without corroborating evidence.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Why identifying AI-generated code is difficult</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Source code is built from shared languages, libraries, and programming conventions. Many common problems have similar solutions regardless of who writes them. That makes authorship difficult to determine from the final file alone.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A human developer may use an AI assistant for an initial draft and then refactor it extensively. Another developer may write code manually while following a tutorial or formatter. In both cases, stylistic clues can be misleading.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Before trying to detect AI use, consider the reason for the question. Code quality review, academic disclosure, and internal compliance have different goals and require different evidence.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Common clues are not proof</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Generic comments, repetitive naming, unusually polished formatting, or long explanations are sometimes described as signs of AI generation. None of these characteristics uniquely identifies machine-written code.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Formatters can make human code extremely consistent. Templates can produce repeated structures. Generated output, meanwhile, may contain mistakes or unconventional choices that do not resemble the stereotypes.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A reviewer should not accuse someone of undisclosed tool use based solely on whether the code looks too clean or too ordinary.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Understand detector limitations</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Automated classifiers may look for statistical patterns in code. Their accuracy can vary with language, snippet size, training examples, and later human edits.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A detector's numerical score should not automatically be treated as the probability that a particular person used AI. False positives and false negatives can occur, especially with short, standard functions.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">If a tool claims high accuracy, look for independent evaluations that include realistic human-written and AI-assisted samples. Consider whether the test conditions resemble the code you are reviewing.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Use provenance and process information</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">When origin matters, repository history, pull requests, review discussions, and contributor disclosures can provide context. These records are not perfect proof, but they describe a development process rather than inferring it from formatting.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Teams and educators can reduce uncertainty by establishing clear expectations about acceptable assistance and required attribution before work begins.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Protect privacy when investigating. Do not upload confidential source files to third-party detection services without appropriate authorization and an understanding of their data practices.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Review correctness regardless of authorship</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Most software reviews should focus on observable properties: does the code meet requirements, handle invalid inputs, enforce permissions, and avoid unnecessary dependencies?</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A concrete defect can be reproduced and fixed. An uncertain authorship label often cannot. If a code sample is risky, document the behavior and request a correction rather than relying on speculation.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The responsible approach is to recognize detection limits, seek appropriate process evidence, and judge the software by its verified quality.</p>
+</div>
         </div>
     </div>
 
