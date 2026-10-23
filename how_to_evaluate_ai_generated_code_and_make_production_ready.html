@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="Production readiness involves reliability, security, observability, and maintainability—not simply whether a feature works in a demo.">
-  <title>How To Evaluate Ai Generated Code And Make Production Ready</title>
+  <meta name="description" content="A practical checklist for turning AI-generated prototypes into production-ready software through testing, security, observability, and code review.">
+  <title>How to Evaluate AI-Generated Code and Make It Production-Ready | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Preparing AI-generated code for production</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Production readiness involves reliability, security, observability, and maintainability—not simply whether a feature works in a demo.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Review the operational risks</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Check input validation, permissions, timeouts, retries, logs, and dependency updates. Confirm behavior under realistic workloads.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Release with safeguards</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Use tests, code review, monitoring, and a rollback plan. Record known limitations before deployment.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Production readiness begins with requirements</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI assistants can generate convincing demonstrations, but production software must behave reliably for real users and unexpected conditions. A feature that works with sample data may still fail when the network is slow, an input is malformed, or two requests arrive at once.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Start by writing acceptance criteria. Define who can use the feature, which data it handles, what successful behavior looks like, and how failures should be reported. This gives reviewers something concrete to verify.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Avoid equating a successful screenshot with a finished product. Visual polish is only one part of a production release.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Inspect architecture and dependencies</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Review the generated files and trace data from input to output. Check whether responsibilities are separated clearly or whether one large function mixes validation, database operations, and presentation.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Look for duplicated utilities, unexplained abstractions, and packages introduced without a clear need. Verify dependency versions and licenses. A library recommended in a generated answer may not match the project's actual environment.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Keep changes reviewable. If the assistant rewrites unrelated modules, compare the diff and narrow the scope before merging.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Test more than the happy path</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Write automated tests for ordinary behavior, invalid input, boundary conditions, and failures of external services. Check duplicate requests, missing records, and permission errors.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Integration tests help reveal problems that isolated unit tests cannot see. A database query may work by itself while the surrounding API incorrectly exposes records to another user.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">For a user interface, test keyboard navigation, mobile layouts, loading states, and clear error messages. Accessibility and usability are production requirements, not optional finishing touches.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Review security and operational reliability</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Identify sensitive information and enforce authorization at trusted boundaries. Keep private credentials out of public code, validate untrusted input, and review outbound requests.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Consider how the service behaves under realistic traffic and what happens if a dependency becomes unavailable. Add appropriate timeouts, bounded retries, and safeguards against duplicate operations where the application needs them.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Logs and monitoring should help diagnose failures without leaking secrets or unnecessary personal information. Make sure the team knows how to recognize and respond to problems after deployment.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Deploy gradually and maintain accountability</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Use version control and preserve a known working release. Verify environment configuration and test the actual deployed URL, not only the local preview.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Document important assumptions and ownership of critical components. If no one can explain how a generated feature works, it may not be ready to maintain.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI can accelerate implementation, but production readiness is earned through evidence: clear requirements, passing tests, security review, and a plan for operating the software over time.</p>
+</div>
         </div>
     </div>
 
