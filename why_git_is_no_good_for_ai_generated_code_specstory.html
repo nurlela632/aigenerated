@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="Git remains valuable for recording code changes, but commit history alone may not capture why a prompt led to a particular design.">
-  <title>Why Git Is No .good. For Ai-generated Code</title>
+  <meta name="description" content="Explore Git's strengths and limitations for AI-assisted development, including prompts, decisions, diffs, and review history.">
+  <title>Is Git Enough for AI-Generated Code? Understanding the Limits | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Is Git enough for AI-assisted development?</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Git remains valuable for recording code changes, but commit history alone may not capture why a prompt led to a particular design.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Combine tools thoughtfully</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Use Git for source history and add issue descriptions, review notes, or decision records when extra context is useful.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Avoid false choices</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Prompt-history tools can complement version control; they do not replace tests, code review, or reliable commits.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Git records code, not every decision</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Git is a reliable foundation for tracking changes to source files. It shows what changed, when a commit was created, and how branches differ. These capabilities remain useful whether a human or an AI assistant drafted the code.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">What Git does not automatically capture is the reasoning behind every generated edit. A commit may show a new function without explaining which prompt requested it, what assumptions were made, or which alternatives were rejected.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">This gap has led to interest in tools that record AI-assisted development sessions. Such records can provide context, but they do not replace ordinary version control.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Why AI-assisted edits can be difficult to trace</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A single assistant interaction may modify multiple files, introduce dependencies, and rewrite existing logic. If all those changes are committed together, a reviewer may struggle to identify the original purpose.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Conversational context can also be lost when a developer switches tools or resumes work later. The source code remains, but the explanation of how the team arrived there may be missing.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The solution begins with focused changes and descriptive commits. Keep unrelated modifications separate and document important assumptions in pull requests or project notes.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">What session-history tools may add</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Tools in the AI development workflow may attempt to preserve prompts, proposed edits, or summaries of decisions. This can help developers understand why a change was requested and what the assistant attempted.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">However, a recorded conversation is not proof that the final code is correct. The assistant may have made inaccurate claims, and the repository may have changed after the recorded interaction.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Evaluate such tools for privacy, retention, and integration with existing workflows. Do not store secrets or confidential information in unnecessary transcripts.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Combine provenance with verification</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Use Git diffs to inspect actual changes, tests to evaluate behavior, and documentation to explain important design choices. Each source provides different evidence.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">For example, a prompt may say to add authorization, while the diff reveals only a browser-side check. A test of unauthorized API access can expose the gap.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Treat development history as context rather than a substitute for review. The code and its behavior remain the primary objects of evaluation.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">A practical workflow for teams</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Start from a known working commit, request a narrow AI-assisted change, inspect the diff, and run relevant tests. Record the reason for the change in a concise commit message.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">For complicated decisions, include a short design note or pull-request discussion. If using an additional session-recording tool, establish what information it may collect and who can access it.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Git is not obsolete for AI-generated code. It remains essential, while supplementary context tools may help explain the process behind the commits.</p>
+</div>
         </div>
     </div>
 
