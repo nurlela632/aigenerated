@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="Vibe coding often describes directing an AI assistant through natural language rather than manually writing each line. It can speed up experiments but also">
-  <title>Stop Vibe Coding #ai #vibecoding</title>
+  <meta name="description" content="Learn why unreviewed vibe coding creates maintenance risks and how to use AI coding tools with specifications, tests, and clear ownership.">
+  <title>Stop Blind Vibe Coding: Build AI-Assisted Software You Understand | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">What developers mean by vibe coding</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Vibe coding often describes directing an AI assistant through natural language rather than manually writing each line. It can speed up experiments but also obscure how the program works.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Know when to stop experimenting</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">For production systems, review architecture, tests, data handling, and error cases before deployment.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Keep the benefits without the risk</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Use rapid generation for prototypes and deliberate engineering for important features. Maintain a clear record of changes.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">What people mean by vibe coding</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Vibe coding usually describes a workflow where someone explains an idea to an AI assistant, accepts generated changes, and iterates based on whether the result seems to work. The appeal is clear: a beginner can build a visible prototype without first learning every detail of a language or framework.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">That speed can be genuinely useful for exploring an idea. Problems begin when visual success becomes the only definition of correctness. A page that loads in a browser may still mishandle user data, break on a phone, or depend on services that were never configured properly.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The goal is not to reject AI-generated code. It is to move from experimenting with a prototype to engineering a product whose behavior can be explained and verified.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Why intuition is not enough</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Imagine asking an assistant to build a booking form. The initial version collects a name, date, and time, then shows a confirmation. It looks complete, but does it prevent duplicate bookings? Does it validate the date on the server? What happens if storage fails?</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">These questions rarely become obvious from the appearance of the interface. A workflow built around repeatedly asking the model to make things look right can overlook the rules that matter most.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Write a short description of the intended behavior before accepting a large change. Include successful actions, invalid input, and failure conditions. This converts a vague impression into something testable.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Keep the project small and inspectable</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Ask the assistant to implement one feature at a time. Start with a working page, then add validation, then storage, and finally any external integrations. Run the application after each change.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Use version control so you can compare the proposed edit with the previous version. Look for unrelated file modifications, duplicated functions, and new dependencies that the feature does not need.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">If the generated patch is too large to understand, split it into smaller requests. The ability to explain what changed is a practical safeguard against accidental complexity.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Build tests around user behavior</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Test normal and unusual cases. For the booking form, try an empty name, an invalid date, and a repeated submission. Confirm that the application reports errors clearly rather than silently losing information.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">For websites, check mobile layouts, keyboard navigation, and links. For applications with private records, verify permissions at the server or database boundary rather than relying on hidden buttons.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Automated tests do not catch everything, but they make it easier to improve the project without breaking behavior that already works.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Turn experimentation into sustainable development</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A prototype is a learning tool. A production application requires additional attention to security, data handling, maintenance, and monitoring. Be clear about which stage your project has reached.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Ask AI to explain unfamiliar code and suggest test cases, but confirm its claims against actual behavior and reliable documentation. Keep secrets out of public repositories and prompts.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The best response to vibe coding is not to abandon creativity. It is to pair fast experimentation with deliberate verification, so the final software remains useful after the initial demonstration.</p>
+</div>
         </div>
     </div>
 
