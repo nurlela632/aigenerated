@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="An assistant may modify several files quickly. Git history helps identify which change introduced a problem.">
-  <title>The Importance Of Version Control When Working With Ai-generated Code</title>
+  <meta name="description" content="Learn how Git history, focused commits, diffs, branches, and rollback practices make AI-assisted coding safer and easier to maintain.">
+  <title>Why Version Control Matters When Working With AI-Generated Code | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Why version control matters with AI-assisted development</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">An assistant may modify several files quickly. Git history helps identify which change introduced a problem.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Use small reviewable commits</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Separate features from refactors, inspect diffs, and write messages describing intent.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Make experiments reversible</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Work on branches, keep tests running, and avoid committing credentials or temporary generated files.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">AI changes need a reliable history</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI assistants can edit several files in one request, sometimes changing more than the developer intended. Without version control, it can be difficult to tell what changed or restore the previous working state.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Git provides a record of file changes and helps developers compare a proposed patch with an earlier revision. That visibility is especially useful when generated code appears correct but introduces an unexpected regression.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Version control does not automatically verify quality. It provides the evidence and recovery options needed for a disciplined review process.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Commit before significant experiments</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Before requesting a large feature or refactor, save a known working version. This creates a clear reference point for evaluating the assistant's changes.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">After generation, inspect the diff rather than relying on the assistant's summary. Look for deleted functions, altered configuration, new dependencies, and edits outside the requested scope.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">If the change is unsuitable, revert it or restore the relevant files. This is safer than asking an assistant to reconstruct the previous version from memory.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Keep commits focused and understandable</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A commit should ideally represent one coherent change, such as fixing form validation or adding a specific interface feature. Mixing unrelated formatting, dependency updates, and new functionality makes review harder.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Use descriptive commit messages that explain the purpose of the change. Where helpful, record the acceptance tests and any important design decisions in the pull request.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Focused history helps future maintainers locate when a behavior changed and understand why the team accepted it.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Use branches and reviews for larger changes</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">For work that may disrupt a stable project, create a separate branch and review the changes before merging. This allows experiments without immediately affecting the main release.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A pull request provides a place to discuss assumptions, review tests, and request narrower edits. Even a solo developer can benefit from pausing to inspect a proposed patch.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">When working directly on a main branch, keep changes especially small and verify each one before proceeding. A protected release process may be appropriate for higher-risk projects.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Make recovery part of the workflow</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">When a generated edit causes a problem, use the history to identify the responsible change. Reproduce the failure, add a test if possible, and apply the smallest supported fix.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Keep a clear distinction between code that has been generated, code that has been reviewed, and code that has been deployed. A successful commit is not the same as a verified production release.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Version control turns AI-assisted experimentation into a traceable process. It allows developers to move quickly while retaining the ability to inspect, explain, and reverse changes.</p>
+</div>
         </div>
     </div>
 
