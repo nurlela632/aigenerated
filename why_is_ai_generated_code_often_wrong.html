@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="A model can misunderstand requirements, use outdated examples, or invent APIs that sound plausible.">
-  <title>Why Is Ai-generated Code Often Wrong</title>
+  <meta name="description" content="Understand why AI coding assistants make mistakes and learn how better context, smaller changes, and tests improve reliability.">
+  <title>Why Is AI-Generated Code Often Wrong? | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Why generated code is sometimes wrong</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">A model can misunderstand requirements, use outdated examples, or invent APIs that sound plausible.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Improve the inputs</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Supply the runtime, dependency versions, expected behavior, and representative examples.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Verify the outputs</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Run tests, check official documentation, and review changes in small steps. A confident answer is not evidence that the code works.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">A plausible answer is not a verified answer</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI coding assistants generate solutions based on patterns and the context they receive. They can produce useful implementations, but they do not automatically run every proposed function or confirm that it matches the actual environment.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A response may be syntactically valid yet use the wrong library version, misunderstand a business rule, or omit a required error case. Clear formatting can make these mistakes harder to notice.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The right response is not to assume every generated suggestion is defective. It is to verify the specific implementation against requirements and observable behavior.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Missing context leads to wrong assumptions</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">If a prompt says build a login page without describing the existing authentication system, the assistant may invent a storage mechanism or choose an incompatible framework.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Provide the relevant files, runtime constraints, and expected behavior. Mention what must remain unchanged so the assistant does not rewrite unrelated parts of the project.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">When important information is unknown, ask the assistant to state its assumptions and questions before producing a large patch.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Small examples hide edge cases</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Generated code often demonstrates the normal path with clean inputs. Real applications encounter empty values, unexpected types, repeated requests, and unavailable external services.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Write tests for boundaries and failure conditions. For a form, check missing fields and duplicate submissions. For an API, check invalid identifiers and unauthorized access.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A passing demonstration establishes only that one scenario worked. It does not show that the implementation is complete.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Large edits multiply the chance of mistakes</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">When an assistant changes many files at once, a small incorrect assumption can spread through several modules. The result may appear coherent while introducing regressions elsewhere.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Ask for focused changes and inspect the diff after each step. Keep a working revision available so an unsuitable edit can be reversed.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">If a proposed fix fails, provide the exact error and steps to reproduce it. Repeatedly asking for a full rewrite often creates more uncertainty than a targeted debugging process.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Improve reliability through feedback</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Combine clear specifications, current documentation, automated tests, and human review. Verify unfamiliar APIs and inspect dependencies before adopting them.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Use AI explanations to learn, but compare claims with actual code and runtime results. Add regression tests whenever a defect is discovered.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI-generated code becomes more useful when the workflow treats errors as problems to investigate systematically rather than surprises to ignore.</p>
+</div>
         </div>
     </div>
 
