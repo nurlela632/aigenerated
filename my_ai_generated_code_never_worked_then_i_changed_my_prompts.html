@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="Vague requests leave important assumptions unstated. An assistant may fill those gaps with choices that do not fit the project.">
-  <title>My Ai-generated Code Never Worked, Then I Changed My Prompts</title>
+  <meta name="description" content="Learn how better coding prompts clarify requirements, provide project context, limit changes, and make AI-generated code easier to test.">
+  <title>Why My AI-Generated Code Failed Until I Improved My Prompts | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Why better prompts can improve code results</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Vague requests leave important assumptions unstated. An assistant may fill those gaps with choices that do not fit the project.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Specify constraints and examples</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Include the runtime, existing interfaces, input samples, desired output, and what must not change.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Iterate with tests</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Provide the exact failing case and request a minimal patch. Review the diff and verify behavior before moving on.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Why vague prompts often disappoint</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A request such as build a dashboard gives an AI assistant very little guidance. It must guess the framework, data source, layout, and expected behavior. The resulting code may be impressive yet unsuitable for the actual project.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">When a first draft fails, asking the model to regenerate everything can repeat the same mistake. The problem may be missing context rather than a lack of coding ability.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Better prompts do not guarantee perfect code. They reduce avoidable ambiguity and make the proposed solution easier to verify.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">State the environment and existing structure</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Tell the assistant which language and framework versions the project uses, which files are relevant, and how the application is run. Include the actual error message when requesting a fix.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">For example, explain that a website uses plain HTML, CSS, and JavaScript and must remain compatible with its current hosting setup. This prevents an assistant from assuming that a server-side framework is available.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Provide only the necessary source context. Remove passwords, access tokens, and private customer data before sharing examples.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Describe observable behavior and constraints</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Instead of asking for a better form, specify that the form must reject empty names, show a clear message, and preserve previously entered values when validation fails.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">List the elements that must not change, such as existing navigation, CSS classes, or unrelated components. Ask the assistant to edit only the smallest relevant section.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Define success with testable examples. An assistant can then target a known outcome rather than interpreting broad adjectives such as modern or professional.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Use an iterative prompt sequence</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Start by asking the assistant to summarize the problem and propose a short plan. Confirm the plan before requesting code. Next, implement one feature or fix one error at a time.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">After each edit, run the application and report exactly what happened. If a button still fails, share the steps to reproduce the issue and any console error rather than requesting another full rewrite.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Review the diff and reject unrelated changes. Small iterations make it easier to identify which edit introduced a regression.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Build a reusable prompting habit</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A useful coding prompt contains the goal, environment, relevant context, constraints, and acceptance tests. It also asks the assistant to flag uncertainty rather than invent missing details.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Save examples of prompts that produced focused, reviewable changes, but adapt them to each task. Copying a template without updating the requirements can introduce new confusion.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The biggest improvement often comes from thinking more clearly about the software itself. Better prompts help communicate that thinking, while testing and review establish whether the generated code is correct.</p>
+</div>
         </div>
     </div>
 
