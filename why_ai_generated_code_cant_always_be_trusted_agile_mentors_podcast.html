@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="Models optimize for plausible responses, not guaranteed compliance with a project's complete requirements.">
-  <title>Why Ai-generated Code Can.t Always Be Trusted</title>
+  <meta name="description" content="Explore why AI-generated code needs review and testing, and how agile teams can balance coding speed with reliability.">
+  <title>Why AI-Generated Code Cannot Always Be Trusted | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Why AI-generated code cannot always be trusted</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Models optimize for plausible responses, not guaranteed compliance with a project's complete requirements.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Understand the failure modes</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Watch for fabricated functions, incorrect assumptions, and incomplete error handling.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Build confidence through evidence</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Use tests, reviews, documentation, and real-world monitoring rather than trusting confident prose.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Fast answers can still be incomplete</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI coding assistants can produce a solution in seconds, which makes them appealing during a busy development cycle. Yet speed and correctness are different qualities. A model may generate a plausible function while missing a constraint that matters in the actual project.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The output may use an outdated API, assume a dependency is installed, or ignore a condition that was not mentioned in the prompt. These issues are easy to overlook when the code is formatted cleanly and accompanied by a confident explanation.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Trust should be based on observable behavior and evidence, not on how quickly or convincingly an answer was delivered.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Agile teams still need clear acceptance criteria</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Short development cycles work best when the team agrees on what a feature must accomplish. For AI-assisted work, acceptance criteria are especially valuable because they limit ambiguity in the generated implementation.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Describe expected results, invalid inputs, and permission rules. For example, a task-management feature should define who may edit an item, how changes are saved, and what happens if a request fails.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A clear definition of done should include appropriate tests and review. Generating the first version is a development step, not the completion of the user story.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Code review should examine assumptions</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Reviewers should inspect the actual diff and trace how information flows through the change. Look for duplicated logic, unexpected dependencies, and edits outside the intended scope.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Ask why a particular approach was chosen. If nobody can explain a new abstraction or security check, the code may be too difficult to maintain.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">An AI assistant can suggest potential defects, but its review is another source of hypotheses. Human reviewers still need to verify important claims through tests and documentation.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Feedback loops make assistance safer</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Keep generated changes small enough to test after each iteration. When a bug appears, capture the error message and reproduce the failure before asking for a correction.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Add a regression test for the issue, then verify that the fix does not break existing behavior. This creates useful feedback for both the assistant and the development team.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Use version control to preserve known working states. If a broad generated patch causes regressions, a focused revert is often safer than requesting another complete rewrite.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Build a culture of accountable AI use</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Teams can agree on when AI assistance is appropriate, how it should be disclosed, and which changes require additional review. The purpose is consistent quality rather than policing a particular tool.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Measure the full cost of delivery, including debugging and maintenance. A fast draft that generates repeated rework may not improve productivity.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI can support agile development when it is integrated into disciplined engineering. The team remains responsible for the behavior it releases to users.</p>
+</div>
         </div>
     </div>
 
