@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="Debates over whether code is AI-generated can distract from whether it meets the specification and can be maintained.">
-  <title>It.s Not Ai Generated Code, It.s .</title>
+  <meta name="description" content="Explore why successful AI-assisted programming depends on clear requirements, review, tests, and maintainable design—not just generated code.">
+  <title>It's Not Just AI-Generated Code: It's the Engineering Around It | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">The label matters less than the quality</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Debates over whether code is AI-generated can distract from whether it meets the specification and can be maintained.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Judge observable results</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Look for clear interfaces, reliable tests, understandable naming, and appropriate error handling.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Encourage transparency</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Document significant tool assistance when required by your project, but apply the same quality standards to every contribution.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">The code is only one part of the product</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI-assisted development is often presented as a simple transaction: describe a feature, receive code, and publish the result. That framing misses the work that makes software useful. Someone must identify the problem, decide which behavior is acceptable, and confirm that the implementation works in the environment where people will use it.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A generated page may look polished but contain broken navigation. A function may pass a demonstration test but fail on missing data. The code itself is only a candidate solution until those assumptions have been examined.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">This distinction matters because faster drafting does not automatically reduce the time needed for review, integration, and maintenance.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Requirements determine what good code means</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A request to create a user profile sounds straightforward until you consider who may edit it, which information is public, and what happens when a record is deleted. These are product decisions, not syntax details.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Write acceptance criteria before generating a large implementation. Describe normal behavior, invalid input, permission boundaries, and any existing features that must remain unchanged.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">When an assistant makes an assumption, ask it to identify that assumption explicitly. Review the answer against the actual needs of the project instead of accepting a plausible default.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Architecture and integration remain human responsibilities</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A new feature must fit the existing repository. It may need to follow established naming conventions, reuse shared components, and respect how the application stores data.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Generated changes sometimes introduce a second helper that duplicates an existing one or add a package for a problem already solved elsewhere. Such choices can work in isolation while increasing complexity across the codebase.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Inspect the diff and request focused edits. A small, understandable patch is easier to maintain than a broad rewrite whose side effects are difficult to predict.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Testing turns a draft into evidence</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Run the generated feature with ordinary input, empty values, and realistic failure conditions. For a web application, verify mobile layouts, keyboard access, and error messages. For a backend service, inspect authorization and data validation.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Automated tests help preserve correct behavior when the code changes. When an AI suggestion fixes a bug, add a regression test so the same defect is less likely to return.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Do not rely only on an assistant's explanation of why its code works. Read the implementation and compare the behavior with the written requirements.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Long-term ownership is the real challenge</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">After deployment, somebody must handle user reports, dependency updates, and new requirements. If the team cannot explain a generated module, every future change becomes harder.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Keep version history, document important design decisions, and assign responsibility for critical components. Use AI to accelerate repetitive work while preserving the ability to debug without it.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The valuable result of AI-assisted programming is not simply generated code. It is dependable software that people understand well enough to improve over time.</p>
+</div>
         </div>
     </div>
 
