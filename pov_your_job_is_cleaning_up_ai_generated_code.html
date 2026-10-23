@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="Repeated automated edits can leave duplicated functions, inconsistent styles, and unused dependencies.">
-  <title>Pov: Your Job Is Cleaning Up Ai Generated Code</title>
+  <meta name="description" content="A practical guide to refactoring messy AI-generated code, removing duplication, preserving behavior, and avoiding unnecessary rewrites.">
+  <title>Cleaning Up AI-Generated Code Without Breaking the Project | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Cleaning up a codebase filled with generated changes</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Repeated automated edits can leave duplicated functions, inconsistent styles, and unused dependencies.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Find the highest-risk areas</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Start with failing tests, security-sensitive functions, and modules that are difficult to understand.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Refactor incrementally</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Add tests around existing behavior, simplify one module at a time, and avoid combining cleanup with unrelated features.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Why generated code can become messy</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">An AI assistant may solve each request independently, creating new functions and patterns without recognizing that the project already has equivalent code. After several iterations, a repository can contain duplicated utilities, inconsistent naming, and dependencies that are no longer needed.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The problem is not unique to AI. Human developers also accumulate technical debt under time pressure. AI simply makes it easier to produce changes faster than they can be reviewed.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Before cleaning up, separate cosmetic concerns from actual risks. Repeated formatting may be annoying, but broken permission checks and fragile state handling deserve priority.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Establish a working baseline</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Run the existing tests and record what the application currently does. If tests are missing, document the key user journeys and create a few checks before refactoring.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Use version control to preserve a known working state. A cleanup should be reversible if it changes behavior unexpectedly.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Inspect the repository for duplicated functions, unused imports, inconsistent error handling, and modules that are difficult to understand. Avoid treating every unfamiliar pattern as a defect.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Refactor in small, purposeful steps</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Choose one issue at a time. If two components perform the same validation, confirm that their requirements are actually identical before combining them.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Make a focused change, run tests, and inspect the diff. A broad rewrite may make the code look more uniform while introducing regressions that are difficult to trace.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Ask an AI assistant to propose alternatives or identify duplication, but verify each suggestion against the current architecture. It may overlook hidden dependencies or application-specific conventions.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Improve readability without adding complexity</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Use descriptive names, small functions, and consistent error handling. Remove comments that merely repeat obvious code, but retain explanations of important business rules and surprising constraints.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Avoid introducing abstractions just because they seem elegant. A simple function used twice may be easier to maintain than a generic framework built for hypothetical future needs.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Review dependencies before removing them. A package that appears unused in one file may still be required by another part of the application or the build process.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Keep the codebase healthy after cleanup</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Add regression tests for defects discovered during refactoring and establish review expectations for future generated changes. Encourage small pull requests with a clear purpose.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Track whether cleanup improves the time needed to understand and modify features. Reduced complexity should be observable in daily development, not just in fewer lines of code.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">The goal is not to erase evidence of AI assistance. It is to leave behind a project that is understandable, reliable, and easier to extend.</p>
+</div>
         </div>
     </div>
 
