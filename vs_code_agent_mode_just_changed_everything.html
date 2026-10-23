@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="Agent-style workflows can coordinate edits across files and run development tasks with user approval. Exact capabilities depend on the extension and versio">
-  <title>Vs Code Agent Mode Just Changed Everything</title>
+  <meta name="description" content="Explore how agent-style workflows in VS Code affect file editing, code review, testing, permissions, and developer productivity.">
+  <title>VS Code Agent Mode: What It Changes for AI-Assisted Coding | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">What agent mode changes in VS Code</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Agent-style workflows can coordinate edits across files and run development tasks with user approval. Exact capabilities depend on the extension and version.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Review every proposed action</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Inspect which files will change, which commands will run, and whether any secrets or private data are involved.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Keep changes auditable</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Work on a branch, review diffs, and run tests before accepting multi-file edits.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">From chat suggestions to project actions</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Traditional coding assistance often involves copying a snippet from a chat window into an editor. Agent-style workflows can go further by proposing coordinated edits across a project and helping with related development steps.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">This is appealing when a task touches several files, such as adding a component, updating its styles, and writing tests. The assistant may be able to use more repository context than a standalone chat conversation.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">However, the ability to perform more actions also increases the importance of understanding what the tool can access and which changes require approval.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Why project context matters</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A code assistant needs to know the language, framework, conventions, and existing implementation before making reliable changes. Without that context, it may introduce duplicate utilities or choose incompatible APIs.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Give the agent a specific goal and identify files that should remain unchanged. For example, ask it to update a form's validation without modifying site navigation, images, or unrelated scripts.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Review whether the assistant followed those constraints. An accurate-looking result can still introduce regressions outside the visible feature.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Understand permissions and execution</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Some agent workflows can propose terminal commands, install dependencies, or interact with external services. Those capabilities should be used with appropriate controls, especially in repositories containing private information.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Read proposed actions before approving them. Avoid granting unnecessary access to credentials, production infrastructure, or unrelated directories.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Begin with a noncritical project and learn how the tool presents diffs, asks for confirmation, and reports failures. Features and interfaces can change, so consult current official documentation.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Test every meaningful change</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">After the agent edits files, inspect the version-control diff. Look for unexpected deletions, new packages, and assumptions about configuration.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Run the project's normal tests and reproduce the user workflow the change was intended to improve. Include invalid input and error conditions, not only a successful demonstration.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">If a problem appears, ask for a focused correction based on the actual error. Avoid repeatedly regenerating the entire project because that can obscure the original defect.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Measure productivity beyond speed</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A workflow that edits many files quickly is useful only when the resulting software is correct and maintainable. Record review effort, regressions, and the number of attempts needed to complete a task.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Keep commits focused and preserve a known working version. Make sure the team can explain the new code without relying on the original agent conversation.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Agent mode can reduce mechanical work in VS Code, but it should strengthen—not replace—the habits of specification, review, and testing.</p>
+</div>
         </div>
     </div>
 
