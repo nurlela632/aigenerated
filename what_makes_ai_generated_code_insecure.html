@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="Common weaknesses include unchecked input, missing authorization, exposed secrets, and unsafe dependency choices.">
-  <title>What Makes Ai Generated Code Insecure</title>
+  <meta name="description" content="Understand common security weaknesses in AI-generated software, including authorization gaps, unsafe input handling, leaked secrets, and dependency risks.">
+  <title>What Makes AI-Generated Code Insecure? | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">What makes generated code insecure?</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Common weaknesses include unchecked input, missing authorization, exposed secrets, and unsafe dependency choices.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Follow data flow</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Identify untrusted inputs, where they are transformed, and which sensitive operations they can reach.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Use defense in depth</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Apply validation, least privilege, security testing, and human review before release.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Insecurity comes from missing safeguards</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI-generated code is not inherently unsafe, but a model may produce an implementation that focuses on visible functionality while omitting essential security requirements.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A feature can work exactly as demonstrated and still expose private records, trust invalid input, or reveal sensitive configuration. These problems arise when requirements are incomplete or review is too shallow.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Security assessment should focus on the application's data, permissions, and trust boundaries rather than simply whether AI wrote the first draft.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Authentication is not authorization</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">An endpoint may correctly identify a signed-in user but fail to check whether that user is allowed to access a particular record. This is a common class of security design error.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">For example, a profile API should not return another person's private details merely because a request includes a different record identifier.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Enforce access rules on the server or database. Browser controls are useful for the interface, but hiding a button does not protect the underlying operation.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Untrusted input and unsafe assumptions</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Forms, URLs, files, and third-party responses can contain unexpected values. Validate input against the intended data shape and use established APIs for database operations.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Review how the application handles malformed data and failures. Error messages should help users recover without exposing internal details or secrets.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Generated examples may cover only successful inputs. Add tests for empty fields, oversized values, and invalid requests to identify missing checks.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Secrets, dependencies, and external services</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Private keys and administrative credentials should not appear in browser code or public repositories. Use appropriate server-side configuration and secret-management facilities.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Inspect packages suggested by an assistant. Confirm that each dependency is necessary, maintained, and compatible with the project.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Review outbound network requests and consider what happens when an external service fails. Unexpected data transfers and fragile integrations deserve attention.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Create a repeatable security review</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Identify sensitive data, user roles, and the operations each role may perform. Write tests that confirm unauthorized requests are rejected.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Use dependency checks, static analysis, and human review as complementary tools. For high-impact applications, involve people with relevant security expertise.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI can help draft secure code, but security is demonstrated through clear requirements, careful implementation, and ongoing verification.</p>
+</div>
         </div>
     </div>
 
