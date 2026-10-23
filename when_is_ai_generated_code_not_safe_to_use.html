@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="A working demo is not enough when software handles private information, permissions, or irreversible actions.">
-  <title>When Is Ai-generated Code Not Safe To Use</title>
+  <meta name="description" content="Learn when AI-generated code needs extra scrutiny, including sensitive data, missing authorization, untested dependencies, and high-impact systems.">
+  <title>When Is AI-Generated Code Not Safe to Use? | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">When generated code is unsafe to deploy</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">A working demo is not enough when software handles private information, permissions, or irreversible actions.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Warning signs</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Missing tests, unexplained dependencies, hard-coded credentials, and unhandled failures require attention.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Choose a safer path</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Pause deployment, document the risks, and obtain appropriate review. Use established libraries and verified configurations.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Safety depends on context, not authorship</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI-generated code can be useful for routine tasks, but it is not automatically safe because it compiles or passes a demonstration. Whether it is appropriate depends on what the application does, what data it handles, and how thoroughly the result has been reviewed.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">A decorative webpage has different failure consequences from an application that controls access to private records. The same generated pattern may be acceptable in a small prototype but unsuitable in a production service without further verification.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Treat the output as a draft whose assumptions must be checked against the real environment. The question is not simply whether AI wrote the code, but whether the implementation has enough evidence to support its intended use.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Be especially careful with sensitive data</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Code that processes personal records, account details, or confidential business information deserves strict access controls. A generated endpoint may correctly check that someone is signed in while failing to verify that they own the requested record.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Review authentication and authorization separately. Permissions should be enforced on the server or database, not only through buttons hidden in the interface.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Also inspect logging, error messages, and external requests. A feature can accidentally expose sensitive information even when the main user workflow appears to function.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Untested assumptions create operational risks</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Generated examples often assume that a service is available, a file exists, or an input has the expected shape. Real systems encounter timeouts, empty values, and unexpected responses.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Test failure paths deliberately. Verify what happens when a network request fails, a record is missing, or an operation is submitted twice. Confirm that the application handles errors without corrupting data or misleading users.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">If the assistant introduces a library or service, check its documentation, compatibility, and maintenance requirements before relying on it.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">High-impact software requires stronger review</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Software involved in financial decisions, healthcare workflows, or critical infrastructure can have serious consequences when it behaves incorrectly. Such systems require domain-specific controls and appropriate professional oversight.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Do not deploy a generated implementation simply because it looks plausible. Require clear specifications, independent testing, and reviews proportionate to the potential harm.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Even ordinary business applications may contain critical components, such as account recovery or payment authorization. Review risk at the feature level rather than assuming the whole project has one uniform level of sensitivity.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">A practical release decision</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Before accepting generated code, identify the data it accesses, the actions it performs, and the users it affects. Check requirements, inspect the diff, and run tests for both allowed and disallowed behavior.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Preserve a working revision and maintain a rollback plan. Document important assumptions so future maintainers can understand the reasoning behind the implementation.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI-generated code is not safe to use when the team cannot explain, test, or appropriately review its behavior. Confidence should follow verification, not replace it.</p>
+</div>
         </div>
     </div>
 
