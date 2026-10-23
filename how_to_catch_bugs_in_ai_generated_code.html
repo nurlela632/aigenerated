@@ -7,8 +7,8 @@
   <meta name="generator" content="Mobirise v3.12.1, mobirise.com">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="assets/images/videoplaybutton-128x128.png" type="image/x-icon">
-  <meta name="description" content="Generated functions can fail on empty values, unusual ordering, asynchronous timing, or unexpected external responses.">
-  <title>How To Catch Bugs In Ai-generated Code</title>
+  <meta name="description" content="Find bugs in AI-generated code through focused reviews, boundary tests, reproducible failures, and regression testing.">
+  <title>How to Catch Bugs in AI-Generated Code Before Release | Lanauke.Com</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&amp;subset=latin">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i">
@@ -113,7 +113,28 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 lead"><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Finding bugs in AI-generated code</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Generated functions can fail on empty values, unusual ordering, asynchronous timing, or unexpected external responses.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Create targeted tests</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Use boundary inputs, malformed data, and repeated operations. Compare observed behavior with written requirements.</p><h4 style="margin:16px 0 8px !important;line-height:1.4 !important;">Avoid patch cascades</h4><p style="margin:0 0 12px !important;line-height:1.65 !important;">Change one cause at a time, preserve a regression test, and review the diff for unrelated modifications.</p></div>
+            <div class="col-xs-12 lead">
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Begin with a specification you can test</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI assistants can generate code that appears to work while quietly interpreting a requirement differently from the developer. The first step in finding bugs is to describe what the feature must do in observable terms.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">For a shopping-cart calculation, specify how quantities, discounts, taxes, and invalid values should be handled. A result that looks correct for one example may be wrong when the cart is empty or a discount exceeds an allowed limit.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Turn those expectations into a small collection of tests before making additional changes. Tests are most useful when they check intended behavior rather than merely repeating the assumptions of the generated implementation.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Probe boundary conditions</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Many defects hide at the edges of otherwise successful workflows. Try empty input, missing fields, duplicate entries, unusually long text, and values just above or below a permitted threshold.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">For a date-based feature, examine time-zone differences and transitions between months or years. For a list operation, test zero items, one item, and many items. These cases can reveal errors that ordinary sample data does not expose.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Keep a record of each unexpected result and the smallest input that reproduces it. That evidence makes it easier to locate the cause and verify the eventual fix.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Review the code for fragile assumptions</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Inspect conditions, loops, state changes, and error handling. Look for duplicated logic or functions that independently update the same information. Generated code can solve a local task while overlooking how the surrounding application manages state.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Check external calls and package usage against current documentation. An invented method name or outdated API example can look convincing in a code block but fail immediately in the actual environment.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Use the version-control diff to identify changes outside the requested scope. Unrelated edits can introduce bugs even when the new feature behaves as expected.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Debug with controlled experiments</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">When a test fails, resist the urge to request a complete rewrite. Identify the relevant function, inspect its inputs, and trace how the unexpected value was produced.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Use logging or a debugger to observe state at key points. Form a specific hypothesis, change one thing, and rerun the failing case. If the hypothesis is wrong, revert the change before exploring another possibility.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">AI can suggest explanations, but treat them as candidates to verify. A confident diagnosis is not evidence until the behavior supports it.</p>
+<h4 style="margin:18px 0 8px !important;line-height:1.4 !important;">Prevent the same bug from returning</h4>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">After a fix works, add a regression test that would fail if the defect reappeared. Run the broader test suite to ensure the correction did not damage another feature.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">For web applications, include checks for mobile layouts, keyboard access, and failed network requests. For backend services, consider permission boundaries, retries, and malformed data.</p>
+<p style="margin:0 0 12px !important;line-height:1.65 !important;">Catching bugs is not a single final inspection. It is a habit of making small changes, measuring their behavior, and preserving what already works.</p>
+</div>
         </div>
     </div>
 
